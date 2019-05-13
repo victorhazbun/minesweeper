@@ -4,10 +4,14 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resource :authentication, only: :create
-      resource :registration, only: :create
+      resource :authentication, only: [:create]
+      resource :registration, only: [:create]
     end
   end
+
+  resource :game, only: [:new, :show]
+
+  get '/login', to: 'authentications#new', as: :login
 
   root 'pages#landing'
 end

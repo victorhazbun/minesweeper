@@ -36,6 +36,7 @@ group :test do
   gem 'shoulda-matchers', '~> 4.0'
   gem 'simplecov', '~> 0.16.1', require: false
   gem 'rspec-json_expectations', '~> 2.1'
+  gem 'chromedriver-helper', '~> 2.1', '>= 2.1.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

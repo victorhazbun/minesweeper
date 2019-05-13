@@ -18,3 +18,16 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+.w3-container {
+  padding: 128px 16px;
+}
+
+.container-errors {
+  margin: 64px 0 0;
+  padding: 15px;
+}
+
+.social-link {
+  text-decoration: none;
+}

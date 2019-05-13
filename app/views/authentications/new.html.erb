@@ -1,0 +1,14 @@
+<div class="w3-container w3-light-grey w3-row">
+  <div class="w3-half">
+    <h3 class="w3-center">Log in</h3>
+    <%= form_tag(api_v1_authentication_path, data: { form: 'login' }) do %>
+      <%= email_field_tag(:email, nil, autofocus: true, class: 'w3-input w3-border', placeholder: 'Email') %>
+
+      <%= password_field_tag(:password, nil, class: 'w3-input w3-border', placeholder: 'Password') %>
+
+      <hr>
+
+      <%= submit_tag('LOG IN', class: 'w3-button w3-black') %>
+    <% end %>
+  </div>
+</div>

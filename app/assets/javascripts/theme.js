@@ -13,3 +13,15 @@ function w3_open() {
 function w3_close() {
   mySidebar.style.display = 'none';
 }
+
+// Adds errors to the errors container
+function w3_errors(errors) {
+  var errorsContainer = document.querySelector('[data-container=\'errors\']');
+  errorsContainer.classList.remove('w3-hide');
+
+  Array.prototype.forEach.call(errors, function(error, i) {
+    var p = document.createElement('p');
+    p.innerHTML = error;
+    errorsContainer.appendChild(p);
+  });
+};
