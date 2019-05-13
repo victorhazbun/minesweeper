@@ -29,5 +29,9 @@ module Minesweeper
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    RSpec.configure do |config|
+      config.swagger_dry_run = false
+    end
   end
 end

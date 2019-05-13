@@ -2,14 +2,26 @@
 <html>
   <head>
     <title>Minesweeper</title>
+    <%= tag :meta, name: 'stripe-public-key',
+    content: ENV['STRIPE_PUBLIC_KEY'] %>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://www.w3schools.com/w3css/4/w3.css', 'https://fonts.googleapis.com/css?family=Raleway', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
   </head>
 
   <body>
+    <%= render 'shared/navbar' %>
     <%= yield %>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous">
+    </script>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
