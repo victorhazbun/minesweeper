@@ -1,24 +1,29 @@
-# README
+# Minesweeper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Classic game Minesweeper
 
-Things you may want to cover:
+## The Stack
 
-* Ruby version
+* Ruby 2.6.3
+* Rails 5.2.3
+* Postgres
+* jQuery
 
-* System dependencies
+## Setup
 
-* Configuration
+* clone the repo
 
-* Database creation
+```
+$ bundle install
+$ bundle exec rake db:create db:migrate
+--- if db:migrate raises errors ---
+$ bundle exec rake db:schema:load
+--- end if ---
+$ rails s
+```
 
-* Database initialization
+* Navigate to http://localhost:3000
 
-* How to run the test suite
+## Deployment
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Heroku
