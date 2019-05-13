@@ -11,13 +11,15 @@ gem 'rails', '~> 5.2.3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
-gem 'rswag', '~> 2.0', '>= 2.0.5'
+gem 'rswag-api', '~> 2.0', '>= 2.0.5'
+gem 'rswag-ui', '~> 2.0', '>= 2.0.5'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'massa', '~> 0.5.0'
   gem 'pry-byebug', '~> 3.7'
   gem 'rspec-rails', '~> 3.8'
+  gem 'rswag-specs', '~> 2.0', '>= 2.0.5'
 end
 
 group :development do

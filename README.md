@@ -26,4 +26,4 @@ $ rails s
 
 ## Deployment
 
-Heroku
+[Heroku](https://victor-h-minesweeper.herokuapp.com/)

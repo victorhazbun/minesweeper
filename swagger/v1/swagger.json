@@ -37,22 +37,10 @@
         ],
         "responses": {
           "200": {
-            "description": "authenticated",
-            "examples": {
-              "application/json": {
-                "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTc4MTM1Mjd9.jABWsx0S1Laiwv-giU3fEcxqQlsalZ6epzImpCZgXAM"
-              }
-            }
+            "description": "authenticated"
           },
           "401": {
-            "description": "unauthorized",
-            "examples": {
-              "application/json": {
-                "errors": [
-                  "Your credentials combination are invalid"
-                ]
-              }
-            }
+            "description": "unauthorized"
           }
         }
       }
