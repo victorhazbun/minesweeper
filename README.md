@@ -14,10 +14,11 @@ Classic game Minesweeper
 
 ```
 $ bundle install
-$ bundle exec rake db:create db:migrate
+$ bundle exec rake db:create db:migrate db:seed
 --- if db:migrate raises errors ---
 $ bundle exec rake db:schema:load
 --- end if ---
+
 $ rails s
 ```
 
