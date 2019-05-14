@@ -9,8 +9,9 @@ RSpec.describe GameSerializer do
     Timecop.return
   end
 
+  let(:now) { DateTime.current }
+
   context 'when game have started at and finished at' do
-    let(:now) { DateTime.current }
     let(:game) do
       create(:game,
         started_at: now,
@@ -34,32 +35,7 @@ RSpec.describe GameSerializer do
     end
   end
 
-  context 'when game does not have started at' do
-    let(:now) { DateTime.current }
-    let(:game) do
-      create(:game,
-        started_at: nil,
-        finished_at: now + 1.hour,
-        user: create(:user)
-      )
-    end
-
-    it 'returns serialized game' do
-      expect(described_class.new(game.decorate).serialized_json).to include_json(
-        data: {
-          id: game.id.to_s,
-          type: 'game',
-          attributes: {
-            started_at: nil,
-            finished_at: '2019-09-01T16:05:00Z'
-          }
-        }
-      )
-    end
-  end
-
   context 'when game does not have finished at' do
-    let(:now) { DateTime.current }
     let(:game) do
       create(:game,
         started_at: now,

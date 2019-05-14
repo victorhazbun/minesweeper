@@ -15,4 +15,6 @@ class User < ApplicationRecord
   scope :by_lower_email, -> (email) {
     where('lower(email) = lower(?)', email)
   }
+
+  has_many :games, dependent: :destroy
 end

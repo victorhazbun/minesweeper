@@ -10,7 +10,7 @@ class GameDecorator < Draper::Decorator
   end
 
   def time_in_words
-    return unless object.started_at && object.finished_at
+    return unless object.finished_at
     h.distance_of_time_in_words(
       object.started_at,
       object.finished_at,

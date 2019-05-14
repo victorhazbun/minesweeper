@@ -5,6 +5,10 @@ describe User, type: :model do
     it { is_expected.to have_secure_password }
   end
 
+  describe 'have many' do
+    it { is_expected.to have_many(:games).dependent(:destroy) }
+  end
+
   describe 'email validations' do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_uniqueness_of(:email) }

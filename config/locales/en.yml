@@ -1,3 +1,7 @@
 en:
   errors:
-    unauthorized: 'Your credentials combination are invalid'
+    invalid_credentials: 'your credentials combination are invalid'
+    unauthorized: 'you are not authorized to perform this action'
+    not_found: 'not found'
+    can_not_be_past: 'can not be in the past'
+    can_not_be_before_started_at: 'can not be before started at'

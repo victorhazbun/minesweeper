@@ -32,7 +32,7 @@ describe 'API V1 Authentications' do
         end
       end
 
-      response '401', 'unauthorized' do
+      response '401', 'not authenticated' do
         let(:user) do
           {
             email: the_user.email,
@@ -42,7 +42,7 @@ describe 'API V1 Authentications' do
         run_test! do |response|
           data = JSON.parse(response.body)
           expect(data).to include_json(
-            errors: ['Your credentials combination are invalid']
+            errors: ['your credentials combination are invalid']
           )
         end
       end

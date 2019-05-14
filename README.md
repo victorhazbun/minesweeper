@@ -40,16 +40,21 @@ $ rails s
 - The game board will be shown even if the user is not logged in, however it won't show the details of the game unless it's logged in. Similar to what FB does to motivate users to log in.
 - Fast JSON API for performance, 25 times faster than AMS.
 - To determine how much time a match taked I use `#distance_of_time_in_words`, in this particular scenario is fine but if the requirements change and the application needs to load multiple games then the server response will become slow. To improve it, I can move the time distance calculation into the front-end.
-- Using decorators to wrap certain models like the game model, for presentational concerns.
+- Decorators to wrap certain models like the game model, for presentational concerns.
+- Timecop for solid time navigation on tests.
+- Chronic for datetime parsing, every client can use a different date format, the backend will handle it. The standard is `ISO8601`.
+- Would be nice to add Rubocop. With more time I could do that.
 
 ## Important notes
 
 - I could have used Redis to improve the DB read/write speed.
-- Test coverage is around 90%
-- I aimed for quality instead of quantity
-- Integration specs for the API
-- System specs for user behaivour on the browser
-- Login credentials `demo@example.com:sekret`
+- 100% test coverage.
+- I aimed for quality instead of quantity.
+- Integration specs for the API.
+- System specs for user behaivour on the browser.
+- With more time I could implement the cell API endpoints and complete the game board.
+- Login credentials `demo@example.com:sekret`.
+- For the Swagger API Docs you will need to send the `X-Authorization-Token` token, so first make authenticate a user and then use the token from the response.
 
 ## Deployment
 

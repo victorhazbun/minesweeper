@@ -15,6 +15,9 @@ gem 'rswag-api', '~> 2.0', '>= 2.0.5'
 gem 'rswag-ui', '~> 2.0', '>= 2.0.5'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
+gem 'dalli', '~> 2.7', '>= 2.7.10'
+gem 'connection_pool', '~> 2.2', '>= 2.2.2'
+gem 'chronic', '~> 0.10.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
