@@ -55,7 +55,9 @@ $ rails s
 - System specs for user behaivour on the browser.
 - With more time I could implement the cell API endpoints and complete the game board.
 - Login credentials `demo@example.com:sekret`.
-- For the Swagger API Docs you will need to send the `X-Authorization-Token` token, so first make authenticate a user and then use the token from the response.
+- For the Swagger API Docs you will need to send the `X-Authorization-Token` token, so first authenticate a user and then use the token from the response.
+- My plan is to develop a game board, the game board will have a little form to enter the amount of rows and cols. After the form is submited a game will be created, the game will generate all the cells needed with random cells mined. When the user right-click a cell it will mark it as revealed, if the user left-clicks a cell it will add a flag. In case of revealing a mined cell the game will be updated so it's labeled as finished. The logic to determine when to end the game (win/lose) will be made from the FE not by the BE.
+- This app is not completed, what's done: Login page - Auth API - Game API - Swagger API Docs - Cells table/model.
 
 ## Deployment
 

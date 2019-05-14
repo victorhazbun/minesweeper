@@ -8,7 +8,7 @@
       <%= link_to '#', class: 'w3-bar-item w3-button' do %>
         <i class="fa fa-gamepad"></i> PLAY
       <% end %>
-      <%= link_to '#', class: 'w3-bar-item w3-button' do %>
+      <%= link_to login_path, class: 'w3-bar-item w3-button' do %>
         <i class="fa fa-sign-in"></i> LOGIN
       <% end %>
     </div>
@@ -24,5 +24,5 @@
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <%= link_to 'PLAY', '#', class: 'w3-bar-item w3-button' %>
-  <%= link_to 'LOGIN', '#', class: 'w3-bar-item w3-button' %>
+  <%= link_to 'LOGIN', login_path, class: 'w3-bar-item w3-button' %>
 </nav>
